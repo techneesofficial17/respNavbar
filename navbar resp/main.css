@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Ubuntu;
+}
+body {
+  background: lightblue;
+}
+nav {
+  display: flex;
+  padding: 10px 20px;
+  background: steelblue;
+}
+nav img {
+  width: 10%;
+  cursor: pointer;
+}
+nav ul {
+  background: wite;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+nav ul * {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 10px;
+}
+nav ul *:hover {
+  color: lightblue;
+  transform: scale(1.1);
+  transition: 0.1s ease-in-out;
+}
+
+nav ul li:nth-of-type(4) {
+  margin-left: auto;
+}
+#btns {
+  background: crimson;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+nav img:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-out;
+}
+
+@media screen and (max-width: 1240px) {
+  nav {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    width: 200px;
+    justify-content: space-around;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  nav img {
+    width: 40%;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul * {
+    margin: 10px 0;
+  }
+  nav ul li {
+    flex-direction: column;
+  }
+
+  nav ul li:nth-of-type(4) {
+    margin-top: auto;
+  }
+  nav ul li:nth-last-of-type(4) {
+    margin-top: auto;
+  }
+
+  nav ul li:nth-of-type(4) {
+    margin-top: auto;
+  }
+  .crossbar {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+  }
+  .crossbar:hover {
+    transform: scale(1.2);
+    transition: 0.2s ease-in-out;
+  }
+  .line {
+    height: 6px;
+    width: 50px;
+    background: black;
+    margin: 10px 0;
+    border-radius: 6px;
+  }
+  .top {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+  .cross {
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    display: none;
+  }
+  .linec {
+    height: 6px;
+    width: 50px;
+    background: black;
+    border-radius: 6px;
+  }
+  .linec:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+  }
+
+  .linec:nth-child(2) {
+    transform: rotate(-45deg);
+    position: absolute;
+  }
+  .linec:hover {
+    background: crimson;
+    z-index: 1;
+  }
+}
